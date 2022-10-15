@@ -3,18 +3,22 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  array[array.length - 1];
+  return array;
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length;
 }
 
 
@@ -23,6 +27,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  var array = [];
+  for (let i = 0; i < array.length; i++) {
+    array[i] = (array[i]+1);
+      }
+  return array;
 }
 
 
@@ -30,6 +39,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento);
+  return array; 
 }
 
 
@@ -38,6 +49,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.pop(elemento);
+  return array;
 }
 
 
@@ -47,6 +60,12 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  var palabras = [];
+  var todas = [];
+  for (let i = 0; i < array.length; i++) {
+    todas[0] = todas[0] + " " + array[i];
+    }
+  return todas;
 }
 
 
@@ -54,6 +73,12 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  for (let i = 0; i < array.length; i++) {
+    if (array[i]===elemento) {
+      return true;
+      }
+  }
+  return false;
 }
 
 
@@ -61,6 +86,12 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total = array[i] + total;
+    
+  }
+  return total;
 }
 
 
@@ -68,6 +99,13 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var prom = 0;
+  var contador = 0;
+  for (let index = 0; index < array.length; index++) {
+    prom = prom + array[index];
+    contador++;
+  }
+  return prom/contador;
 }
 
 
@@ -75,6 +113,8 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var max = numeros.reduce(numeros);
+  return Math.max(numeros);
 }
 
 
@@ -82,13 +122,18 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  var mayor = 0;
+  for (let index = 0; index < array.length; index++) {
+    if (arreglo[index]>18) mayor++;
+  }
+  return mayor;
 }
 
 
@@ -97,7 +142,11 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
+  if (numeroDeDia === 1 || numeroDeDia === 7) {
+    return "Es fin de Semana";
+  } else {
+    return "Es dia laboral";
+  }
 } 
 
 
